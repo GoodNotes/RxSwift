@@ -200,7 +200,7 @@ extension ObservableType {
 
 #endif
 
-#if os(iOS)
+#if os(iOS) && !os(UIKitForMac)
     extension UISearchController {
         @available(*, unavailable, message: "createRxDelegateProxy is now unavailable, check DelegateProxyFactory")
         public func createRxDelegateProxy() -> RxSearchControllerDelegateProxy {
